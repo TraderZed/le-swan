@@ -6,7 +6,29 @@
 html,
 body {
   height: 100%;
-  font-family: $Lato;
+  font-family: $baskerville;
   font-weight: 100;
   line-height: 24px;
+}
+
+html {
+  background: #fffffa;
+}
+
+.le-swan-header {
+  display: flex;
+  padding: 30px;
+}
+
+.le-swan-header__box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  .le-swan-header__box-subtitle {
+    display: block;
+    font-size: 12px;
+    font-weight: 100;
+  }
 }

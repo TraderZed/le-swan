@@ -5,43 +5,37 @@
 /* -----------------------
   Fonts
 -------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic");
-@font-face {
-  font-family: "Coffee Service";
-  src: url("../fonts/coffeeservice-webfont.eot");
-  src: url("../fonts/coffeeservice-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/coffeeservice-webfont.woff") format("woff"), url("../fonts/coffeeservice-webfont.ttf") format("truetype"), url("../fonts/coffeeservice-webfont.svg#coffee_serviceregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-h1 {
-  font-family: "Coffee Service";
-  font-weight: normal;
-  text-align: center;
-  color: #323136; }
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase; }
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+h3 {
+  font-size: 46px; }
+  h3 span {
+    display: block;
+    font-size: 20px; }
 
 p {
-  margin: 0 0 20px 0; }
-
-a {
-  text-decoration: none;
-  color: #ff007e; }
-
-@media only screen and (max-width: 768px) {
-  a {
-    color: #ff57ff; } }
+  font-size: 18px;
+  margin: 0 0 60px 0; }
 
 html,
 body {
   height: 100%;
-  font-family: "Lato", sans-serif;
+  font-family: "Baskerville", "Libre Baskerville", serif;
   font-weight: 100;
   line-height: 24px; }
+
+html {
+  background: #fffffa; }
+
+.le-swan-header {
+  display: flex;
+  padding: 30px; }
+
+.le-swan-header__box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+  .le-swan-header__box .le-swan-header__box-subtitle {
+    display: block;
+    font-size: 12px;
+    font-weight: 100; }
