@@ -7,7 +7,7 @@
     %title Le Swan - French Diner
     %link{rel: "stylesheet", type: "text/css", media: "all", href: "public/assets/css/index.css"}
 
-  %body
+  %body.tk-baskerville-display-pt
     %header.le-swan-header
       %h2.le-swan-header__box
         %span.le-swan-header__box-inner
@@ -53,9 +53,9 @@
 
     %section.le-swan-section
       .le-swan-section__menu.le-swan-section_inner
-        %h5 Menu
+        %h5.tk-big-caslon-fb Menu
 
-        .le-swan-menu__dinner
+        .le-swan-menu__dinner.le-swan-menu
           .le-swan-menu__headers
             %h6 French
             %h6 Diner
@@ -70,7 +70,7 @@
               %span.le-swan-menu__list-item-name Tuna Melt
               %span.le-swan-menu__list-item-price 15
 
-        .le-swan-menu__dessert
+        .le-swan-menu__dessert.le-swan-menu
           .le-swan-menu__headers
             %h6 Dessert
           %ul.le-swan-menu__list
@@ -84,80 +84,85 @@
               %span.le-swan-menu__list-item-name Flambé Cherries
               %span.le-swan-menu__list-item-price 15
 
-        .le-swan-menu__milkshakes
-          .le-swan-menu__headers
-            %h6 Milkshakes
-          %ul.le-swan-menu__list
-            %li.le-swan-menu__list-item
-              %span.le-swan-menu__list-item-name Milkshake #1
-              %span.le-swan-menu__list-item-price 15
-        .le-swan-menu__fondue.le-swan__callout
-          %h3
-            Late night fondue!
-            %span 10pm - 2am
+        .le-swan-menu--two-column-odd
+          .le-swan-menu__milkshakes.le-swan-menu
+            .le-swan-menu__headers
+              %h6 Milkshakes
+            %ul.le-swan-menu__list
+              %li.le-swan-menu__list-item
+                %span.le-swan-menu__list-item-name Milkshake #1
+                %span.le-swan-menu__list-item-price 15
+
+          .le-swan-menu__fondue.le-swan__callout.le-swan-menu
+            %h3
+              Late night fondue!
+              %span 10pm - 2am
+
     %section.le-swan-section
       .le-swan-section__wine.le-swan-section_inner
-        %h5 Wine
+        %h5.tk-big-caslon-fb Wine
 
-        .le-swan-menu__white-wine
-          .le-swan-menu__headers
-            %h6 White
-          %ul.le-swan-menu__list
-            %li.le-swan-menu__list-item
-              %span.le-swan-menu__list-item-name
-                Langoureau ‘16 Bourgogne Aligoté
-                %span Burgundy, Fra
-              %span.le-swan-menu__list-item-price 15/64
-            %li.le-swan-menu__list-item
-              %span.le-swan-menu__list-item-name
-                Langoureau ‘16 Bourgogne Aligoté
-                %span Burgundy, Fra
-              %span.le-swan-menu__list-item-price 15/64
+        .le-swan-menu--two-column
+          .le-swan-menu__white-wine
+            .le-swan-menu__headers
+              %h6 White
+            %ul.le-swan-menu__list
+              %li.le-swan-menu__list-item
+                %span.le-swan-menu__list-item-name
+                  Langoureau ‘16 Bourgogne Aligoté
+                  %span Burgundy, Fra
+                %span.le-swan-menu__list-item-price 15/64
+              %li.le-swan-menu__list-item
+                %span.le-swan-menu__list-item-name
+                  Langoureau ‘16 Bourgogne Aligoté
+                  %span Burgundy, Fra
+                %span.le-swan-menu__list-item-price 15/64
 
-        .le-swan-menu__red-wine
-          .le-swan-menu__headers
-            %h6 Red
-          %ul.le-swan-menu__list
-            %li.le-swan-menu__list-item
-              %span.le-swan-menu__list-item-name
-                Langoureau ‘16 Bourgogne Aligoté
-                %span Burgundy, Fra
-              %span.le-swan-menu__list-item-price 15/64
-            %li.le-swan-menu__list-item
-              %span.le-swan-menu__list-item-name
-                Langoureau ‘16 Bourgogne Aligoté
-                %span Burgundy, Fra
-              %span.le-swan-menu__list-item-price 15/64
+          .le-swan-menu__red-wine
+            .le-swan-menu__headers
+              %h6 Red
+            %ul.le-swan-menu__list
+              %li.le-swan-menu__list-item
+                %span.le-swan-menu__list-item-name
+                  Langoureau ‘16 Bourgogne Aligoté
+                  %span Burgundy, Fra
+                %span.le-swan-menu__list-item-price 15/64
+              %li.le-swan-menu__list-item
+                %span.le-swan-menu__list-item-name
+                  Langoureau ‘16 Bourgogne Aligoté
+                  %span Burgundy, Fra
+                %span.le-swan-menu__list-item-price 15/64
 
-        .le-swan-menu__rose-wine
-          .le-swan-menu__headers
-            %h6 Rosé
-          %ul.le-swan-menu__list
-            %li.le-swan-menu__list-item
-              %span.le-swan-menu__list-item-name
-                Langoureau ‘16 Bourgogne Aligoté
-                %span Burgundy, Fra
-              %span.le-swan-menu__list-item-price 15/64
-            %li.le-swan-menu__list-item
-              %span.le-swan-menu__list-item-name
-                Langoureau ‘16 Bourgogne Aligoté
-                %span Burgundy, Fra
-              %span.le-swan-menu__list-item-price 15/64
+        .le-swan-menu--two-column
+          .le-swan-menu__rose-wine
+            .le-swan-menu__headers
+              %h6 Rosé
+            %ul.le-swan-menu__list
+              %li.le-swan-menu__list-item
+                %span.le-swan-menu__list-item-name
+                  Langoureau ‘16 Bourgogne Aligoté
+                  %span Burgundy, Fra
+                %span.le-swan-menu__list-item-price 15/64
+              %li.le-swan-menu__list-item
+                %span.le-swan-menu__list-item-name
+                  Langoureau ‘16 Bourgogne Aligoté
+                  %span Burgundy, Fra
+                %span.le-swan-menu__list-item-price 15/64
 
-        .le-swan-menu__orange-wine
-          .le-swan-menu__headers
-            %h6 Orange
-          %ul.le-swan-menu__list
-            %li.le-swan-menu__list-item
-              %span.le-swan-menu__list-item-name
-                Langoureau ‘16 Bourgogne Aligoté
-                %span Burgundy, Fra
-              %span.le-swan-menu__list-item-price 15/64
-            %li.le-swan-menu__list-item
-              %span.le-swan-menu__list-item-name
-                Langoureau ‘16 Bourgogne Aligoté
-                %span Burgundy, Fra
-              %span.le-swan-menu__list-item-price 15/64
+          .le-swan-menu__orange-wine
+            .le-swan-menu__headers
+              %h6 Orange
+            %ul.le-swan-menu__list
+              %li.le-swan-menu__list-item
+                %span.le-swan-menu__list-item-name
+                  Langoureau ‘16 Bourgogne Aligoté
+                  %span Burgundy, Fra
+                %span.le-swan-menu__list-item-price 15/64
+              %li.le-swan-menu__list-item
+                %span.le-swan-menu__list-item-name
+                  Langoureau ‘16 Bourgogne Aligoté
+                  %span Burgundy, Fra
+                %span.le-swan-menu__list-item-price 15/64
 
         .le-swan-menu__sparkling-wine
           .le-swan-menu__headers
@@ -176,7 +181,7 @@
 
     %section.le-swan-section
       .le-swan-section__people.le-swan-section_inner
-        %h5 People
+        %h5.tk-big-caslon-fb People
 
         .le-swan-section__people
           %h3

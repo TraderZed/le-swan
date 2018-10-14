@@ -6,7 +6,6 @@
 html,
 body {
   height: 100%;
-  font-family: $baskerville;
   font-weight: 100;
   line-height: 24px;
 }
@@ -63,25 +62,146 @@ html {
   align-items: flex-start;
   padding-left: 100px;
   padding-right: 100px;
+
   .le-swan-section__intro-left {
     padding-right: 10%;
     width: 50%;
   }
+
   .le-swan-section__intro-right {
     margin-left: auto;
     padding: 50px 10px;
     width: 40%;
+
     ul {
       padding: 0;
       margin: 0;
       list-style: none;
+
       li {
         margin-bottom: 90px;
+
         &:last-child {
           margin: 0;
         }
       }
     }
+  }
+}
+
+.le-swan-section__menu {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.le-swan-menu {
+  margin-bottom: 75px;
+
+  .le-swan-menu__list {
+    li {
+      position: relative;
+      display: inline-flex;
+      justify-content: space-between;
+      width: calc(50% - 30px);
+      padding: 0 30px 0 0;
+      margin-bottom: 20px;
+
+      &:nth-child(even) {
+        padding: 0 0 0 30px;
+        flex-direction: row-reverse;
+
+        &::before {
+          content: "\\";
+          position: absolute;
+          left: -4px;
+        }
+      }
+    }
+  }
+
+  &__milkshakes {
+    width: 35%;
+    .le-swan-menu__list {
+      li {
+        display: inline-flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: 100%;
+      }
+    }
+
+    .le-swan-menu__headers {
+      justify-content: flex-end;
+    }
+  }
+
+  &__fondue {
+    margin-right: auto;
+    padding-right: 10%;
+    width: 55%;
+
+    h3 {
+      margin: 0;
+      padding: 80px 0;
+    }
+  }
+}
+
+.le-swan-section__wine {
+  padding-left: 100px;
+  padding-right: 100px;
+
+  div:last-child {
+    width: 47%;
+  }
+
+  .le-swan-menu__list {
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      width: 100%;
+
+      .le-swan-menu__list-item-name {
+        span {
+          display: block;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.le-swan-menu__list {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.le-swan-menu--two-column {
+  display: flex;
+  justify-content: space-between;
+  & > div {
+    width: 47%;
+  }
+}
+
+.le-swan-menu--two-column-odd {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.le-swan-menu__headers {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 1px solid #000;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    border-bottom: 1px solid #000;
+    width: 100%;
   }
 }
 
