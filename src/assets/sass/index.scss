@@ -18,6 +18,8 @@ html {
   display: flex;
   align-items: center;
   padding: 30px;
+  margin: 0 auto;
+  max-width: 1380px;
 
   h1 {
     background: url(../images/logo.png) center no-repeat;
@@ -41,16 +43,18 @@ html {
   }
 }
 
-.le-swan-section_inner {
+.le-swan-section {
   background: #fffffa url(../images/band.png) 0 bottom repeat-x;
   background-blend-mode: multiply;
+}
+
+.le-swan-section_inner {
+  margin: 0 auto;
   padding: 30px 30px 100px;
   max-width: 1380px;
 }
 
 .le-swan-section__masthead {
-  background: #fffffa;
-
   img {
     mix-blend-mode: multiply;
     width: 100%;
