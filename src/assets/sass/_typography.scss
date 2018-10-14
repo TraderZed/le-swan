@@ -11,13 +11,23 @@ h1 {
 
 h3 {
   font-size: 46px;
+  margin: 0 0 30px;
   span {
     display: block;
     font-size: 20px;
   }
 }
 
+h4 {
+  font-size: 28px;
+}
+
 p {
   font-size: 18px;
   margin: 0 0 60px 0;
+}
+
+.le-swan-header__subtitle {
+  display: block;
+  font-size: 18px;
 }
