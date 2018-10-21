@@ -160,6 +160,7 @@ html {
   }
 
   .le-swan-menu__list {
+    margin-bottom: 75px;
     li {
       display: flex;
       justify-content: space-between;
@@ -206,6 +207,29 @@ html {
     bottom: 5px;
     border-bottom: 1px solid #000;
     width: 100%;
+  }
+}
+
+.le-swan-section__people {
+  padding: 0 200px;
+}
+
+.le-swan-section__people-person {
+  display: flex;
+  margin-bottom: 50px;
+  .le-swan-section__people-image {
+    img {
+      mix-blend-mode: multiply;
+    }
+  }
+  .le-swan-section__people-copy {
+    padding: 0 0 0 100px;
+  }
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+    .le-swan-section__people-copy {
+      padding: 0 100px 0 0;
+    }
   }
 }
 
