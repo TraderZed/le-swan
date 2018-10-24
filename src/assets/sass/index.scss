@@ -2,24 +2,14 @@
 @import "_mixins";
 @import "_colors";
 @import "_typography";
-
-html,
-body {
-  height: 100%;
-  font-weight: 100;
-  line-height: 24px;
-}
-
-html {
-  background: #fffffa;
-}
+@import "_globals";
 
 .le-swan-header {
   display: flex;
   align-items: center;
-  padding: 30px;
+  padding: $narrowGutter;
   margin: 0 auto;
-  max-width: 1380px;
+  max-width: $maxWidth;
 
   h1 {
     background: url(../images/logo.png) center no-repeat;
@@ -44,29 +34,51 @@ html {
 }
 
 .le-swan-section {
-  background: #fffffa url(../images/band.png) 0 bottom repeat-x;
+  background: $paleYellow url(../images/band.png) 0 bottom repeat-x;
   background-blend-mode: multiply;
-}
 
-.le-swan-section_inner {
-  margin: 0 auto;
-  padding: 30px 30px 100px;
-  max-width: 1380px;
-}
+  .le-swan-section_inner {
+    margin: 0 auto;
+    padding: $narrowGutter $narrowGutter $wideGutter;
+    max-width: $maxWidth;
+  }
 
-.le-swan-section__masthead {
-  img {
-    mix-blend-mode: multiply;
-    width: 100%;
+  &__masthead {
+    background: $paleYellow;
+    img {
+      mix-blend-mode: multiply;
+      width: 100%;
+    }
+  }
+
+  &__intro,
+  &__menu,
+  &__wine {
+    .le-swan-section_inner {
+      padding-left: $wideGutter;
+      padding-right: $wideGutter;
+      max-width: calc(#{$maxWidth} - #{$wideGutter});
+    }
+  }
+
+  &__intro {
+    .le-swan-section_inner {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__people {
+    background: none;
+    padding-bottom: $extraWideGutter;
+    .le-swan-section_inner {
+      padding: 0 $extraWideGutter;
+      max-width: calc(#{$maxWidth} - #{$extraWideGutter});
+    }
   }
 }
 
 .le-swan-section__intro {
-  display: flex;
-  align-items: flex-start;
-  padding-left: 100px;
-  padding-right: 100px;
-
   .le-swan-section__intro-left {
     padding-right: 10%;
     width: 50%;
@@ -77,25 +89,14 @@ html {
     padding: 50px 10px;
     width: 40%;
 
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style: none;
+    li {
+      margin-bottom: 90px;
 
-      li {
-        margin-bottom: 90px;
-
-        &:last-child {
-          margin: 0;
-        }
+      &:last-child {
+        margin: 0;
       }
     }
   }
-}
-
-.le-swan-section__menu {
-  padding-left: 100px;
-  padding-right: 100px;
 }
 
 .le-swan-menu {
@@ -106,12 +107,12 @@ html {
       position: relative;
       display: inline-flex;
       justify-content: space-between;
-      width: calc(50% - 30px);
-      padding: 0 30px 0 0;
+      width: calc(50% - #{$narrowGutter});
+      padding: 0 $narrowGutter 0 0;
       margin-bottom: 20px;
 
       &:nth-child(even) {
-        padding: 0 0 0 30px;
+        padding: 0 0 0 $narrowGutter;
         flex-direction: row-reverse;
 
         &::before {
@@ -125,12 +126,21 @@ html {
 
   &__milkshakes {
     width: 35%;
+
     .le-swan-menu__list {
       li {
         display: inline-flex;
         justify-content: space-between;
         flex-direction: row-reverse;
         width: 100%;
+
+        &:nth-child(even) {
+          padding: 0;
+
+          &::before {
+            content: "";
+          }
+        }
       }
     }
 
@@ -152,15 +162,13 @@ html {
 }
 
 .le-swan-section__wine {
-  padding-left: 100px;
-  padding-right: 100px;
-
-  div:last-child {
+  .le-swan-menu__sparkling-wine {
     width: 47%;
   }
 
   .le-swan-menu__list {
     margin-bottom: 75px;
+
     li {
       display: flex;
       justify-content: space-between;
@@ -186,6 +194,7 @@ html {
 .le-swan-menu--two-column {
   display: flex;
   justify-content: space-between;
+
   & > div {
     width: 47%;
   }
@@ -201,6 +210,7 @@ html {
   justify-content: space-between;
   position: relative;
   border-bottom: 1px solid #000;
+
   &:before {
     content: "";
     position: absolute;
@@ -210,25 +220,27 @@ html {
   }
 }
 
-.le-swan-section__people {
-  padding: 0 200px;
-}
-
 .le-swan-section__people-person {
   display: flex;
   margin-bottom: 50px;
+
   .le-swan-section__people-image {
+    background: $paleYellow;
+
     img {
       mix-blend-mode: multiply;
     }
   }
+
   .le-swan-section__people-copy {
-    padding: 0 0 0 100px;
+    padding: 0 0 0 $wideGutter;
   }
+
   &:nth-child(odd) {
     flex-direction: row-reverse;
+
     .le-swan-section__people-copy {
-      padding: 0 100px 0 0;
+      padding: 0 $wideGutter 0 0;
     }
   }
 }

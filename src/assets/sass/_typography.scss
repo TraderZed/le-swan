@@ -28,6 +28,7 @@ h3 {
   span {
     display: block;
     font-size: 20px;
+    font-family: $openSans;
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 10px 0 0;
@@ -39,8 +40,26 @@ h4 {
 }
 
 h5 {
+  position: relative;
   font-size: 28px;
+  margin-bottom: 60px;
   text-align: center;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 50px;
+  }
+  &::after {
+    background: transparent url(../images/embelishment_right.png) 0 0 no-repeat;
+    right: 0;
+  }
+  &::before {
+    background: transparent url(../images/embelishment_left.png) 0 0 no-repeat;
+    left: 0;
+  }
 }
 
 h6 {
