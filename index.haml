@@ -12,14 +12,14 @@
       %h2.le-swan-header__box
         %span.le-swan-header__box-inner
           French Diner
-          %span.le-swan-header__box-subtitle 892 Queen St W, Toronto
+          %span.le-swan-header__box-subtitle.tk-baskerville-display-pt 892 Queen St W, Toronto
       %h1.le-swan-header__box
         %span.le-swan-header__box-inner Le Swan
       %h2.le-swan-header__box
         %span.le-swan-header__box-inner
-          %a
+          %a{href: "https://resy.com/cities/tor/le-swan", target: "_blank", title: "Reservations"}
             Reservations
-            %span.le-swan-header__box-subtitle Oui.
+            %span.le-swan-header__box-subtitle.tk-baskerville-display-pt Oui.
 
     %section.le-swan-section.le-swan-section__masthead
       .le-swan-section_inner
@@ -49,7 +49,8 @@
             %li
               %h4
                 instagram
-                %span.le-swan-header__subtitle @leswanfrenchdiner
+                %span.le-swan-header__subtitle
+                  %a{href: "http://www.instagram.com/leswanfrenchdiner", target: "_blank"}@leswanfrenchdiner
 
     %section.le-swan-section.le-swan-section__menu
       .le-swan-section_inner
@@ -103,10 +104,14 @@
               %h6 Orange
             %ul.le-swan-menu__list
 
-        .le-swan-menu__sparkling-wine
-          .le-swan-menu__headers
-            %h6 Bubbles
-          %ul.le-swan-menu__list
+        .le-swan-menu--two-column
+          .le-swan-menu__image
+            %img.le-swan-menu__image{src: "./public/assets/images/swan.png"}
+
+          .le-swan-menu__sparkling-wine
+            .le-swan-menu__headers
+              %h6 Bubbles
+            %ul.le-swan-menu__list
 
     %section.le-swan-section.le-swan-section__people
       .le-swan-section_inner
