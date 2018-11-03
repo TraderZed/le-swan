@@ -137,7 +137,8 @@ ul {
     max-width: calc(1380px - 100px); }
   .le-swan-section__intro .le-swan-section_inner {
     display: flex;
-    align-items: flex-start; }
+    align-items: flex-start;
+    padding-bottom: calc(100px * 2); }
   .le-swan-section__people {
     background: none;
     padding-bottom: calc(100px * 2); }
@@ -161,7 +162,14 @@ ul {
     .le-swan-section__intro .le-swan-section__intro-right li:last-child {
       margin: 0; }
     .le-swan-section__intro .le-swan-section__intro-right li .le-swan-header__subtitle {
-      padding-top: 10px; }
+      padding-top: 10px;
+      line-height: 24px; }
+
+.le-swan-menu__list-item-name {
+  font-size: 24px; }
+
+.le-swan-menu__list-item-price {
+  font-size: 16px; }
 
 .le-swan-menu {
   margin-bottom: 75px; }
@@ -171,7 +179,7 @@ ul {
     justify-content: space-between;
     width: calc(50% - 30px);
     padding: 0 30px 0 0;
-    margin-bottom: 20px; }
+    margin-bottom: 25px; }
     .le-swan-menu .le-swan-menu__list li:nth-child(even) {
       padding: 0 0 0 30px;
       flex-direction: row-reverse; }
@@ -201,7 +209,7 @@ ul {
       padding: 80px 0; }
 
 .le-swan-section__wine .le-swan-menu__image {
-  margin-left: -60px;
+  margin-left: -315px;
   width: 450px; }
   .le-swan-section__wine .le-swan-menu__image img {
     mix-blend-mode: multiply; }
@@ -214,11 +222,15 @@ ul {
   .le-swan-section__wine .le-swan-menu__list li {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 100%; }
     .le-swan-section__wine .le-swan-menu__list li .le-swan-menu__list-item-name span {
+      padding-top: 5px;
       display: block;
-      font-size: 14px; }
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
 
 .le-swan-menu__list {
   margin: 20px 0;
@@ -279,3 +291,49 @@ ul {
     bottom: 5px;
     border: 1px solid #000;
     z-index: -1; }
+
+@media only screen and (max-width: 1024px) {
+  .le-swan-section__people .le-swan-section_inner {
+    padding: 0 100px; } }
+
+@media only screen and (max-width: 900px) {
+  .le-swan-section__intro .le-swan-section_inner {
+    display: block; }
+    .le-swan-section__intro .le-swan-section_inner .le-swan-section__intro-left,
+    .le-swan-section__intro .le-swan-section_inner .le-swan-section__intro-right {
+      width: 100%; }
+  .le-swan-menu .le-swan-menu__list li {
+    width: 100%; }
+    .le-swan-menu .le-swan-menu__list li:nth-child(even) {
+      padding: 0;
+      flex-direction: row; }
+      .le-swan-menu .le-swan-menu__list li:nth-child(even)::before {
+        content: ""; }
+  .le-swan-menu__milkshakes {
+    width: 100%; }
+    .le-swan-menu__milkshakes .le-swan-menu__headers {
+      justify-content: flex-start; }
+    .le-swan-menu__milkshakes .le-swan-menu__list li {
+      width: 100%;
+      flex-direction: row; }
+  .le-swan-section__wine .le-swan-menu__image {
+    margin: 0 auto;
+    width: 450px; }
+  .le-swan-section__wine .le-swan-menu__sparkling-wine {
+    width: 100%; }
+  .le-swan-menu__fondue {
+    width: 100%; }
+  .le-swan-menu--two-column-odd {
+    display: block; }
+  .le-swan-menu--two-column {
+    display: block; }
+    .le-swan-menu--two-column > div {
+      width: 100%; }
+  .le-swan-section__people-person {
+    border-bottom: 1px solid #000; }
+    .le-swan-section__people-person .le-swan-section__people-image {
+      display: none; }
+    .le-swan-section__people-person .le-swan-section__people-copy {
+      padding: 0; }
+    .le-swan-section__people-person:nth-child(odd) .le-swan-section__people-copy {
+      padding: 0; } }
