@@ -166,7 +166,8 @@ ul {
       line-height: 24px; }
 
 .le-swan-menu__list-item-name {
-  font-size: 24px; }
+  font-size: 24px;
+  padding-right: 10px; }
 
 .le-swan-menu__list-item-price {
   font-size: 16px; }
@@ -183,6 +184,9 @@ ul {
     .le-swan-menu .le-swan-menu__list li:nth-child(even) {
       padding: 0 0 0 30px;
       flex-direction: row-reverse; }
+      .le-swan-menu .le-swan-menu__list li:nth-child(even) .le-swan-menu__list-item-name {
+        padding: 0 0 0 10px;
+        text-align: right; }
       .le-swan-menu .le-swan-menu__list li:nth-child(even)::before {
         content: "\\";
         position: absolute;
@@ -194,6 +198,9 @@ ul {
       justify-content: space-between;
       flex-direction: row-reverse;
       width: 100%; }
+      .le-swan-menu__milkshakes .le-swan-menu__list li .le-swan-menu__list-item-name {
+        padding: 0 0 0 10px;
+        text-align: right; }
       .le-swan-menu__milkshakes .le-swan-menu__list li:nth-child(even) {
         padding: 0; }
         .le-swan-menu__milkshakes .le-swan-menu__list li:nth-child(even)::before {
@@ -297,16 +304,29 @@ ul {
     padding: 0 100px; } }
 
 @media only screen and (max-width: 900px) {
+  .le-swan-header {
+    flex-direction: column; }
+    .le-swan-header h1 {
+      order: -1;
+      margin: 80px 0; }
+    .le-swan-header .le-swan-header__box {
+      flex: 0 0 auto; }
+  .le-swan-section .le-swan-section_inner {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: calc(1380px - 30px); }
   .le-swan-section__intro .le-swan-section_inner {
     display: block; }
     .le-swan-section__intro .le-swan-section_inner .le-swan-section__intro-left,
     .le-swan-section__intro .le-swan-section_inner .le-swan-section__intro-right {
-      width: 100%; }
+      width: calc(100% - 30px); }
   .le-swan-menu .le-swan-menu__list li {
     width: 100%; }
     .le-swan-menu .le-swan-menu__list li:nth-child(even) {
       padding: 0;
       flex-direction: row; }
+      .le-swan-menu .le-swan-menu__list li:nth-child(even) .le-swan-menu__list-item-name {
+        padding: 0 0 0 0; }
       .le-swan-menu .le-swan-menu__list li:nth-child(even)::before {
         content: ""; }
   .le-swan-menu__milkshakes {
@@ -316,13 +336,14 @@ ul {
     .le-swan-menu__milkshakes .le-swan-menu__list li {
       width: 100%;
       flex-direction: row; }
+      .le-swan-menu__milkshakes .le-swan-menu__list li .le-swan-menu__list-item-name {
+        padding: 0 0 0 0; }
   .le-swan-section__wine .le-swan-menu__image {
-    margin: 0 auto;
-    width: 450px; }
+    display: none; }
   .le-swan-section__wine .le-swan-menu__sparkling-wine {
     width: 100%; }
   .le-swan-menu__fondue {
-    width: 100%; }
+    width: calc(100% - 30px); }
   .le-swan-menu--two-column-odd {
     display: block; }
   .le-swan-menu--two-column {

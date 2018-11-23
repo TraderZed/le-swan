@@ -108,6 +108,7 @@
 
 .le-swan-menu__list-item-name {
   font-size: 24px;
+  padding-right: 10px;
 }
 
 .le-swan-menu__list-item-price {
@@ -129,6 +130,11 @@
         padding: 0 0 0 $narrowGutter;
         flex-direction: row-reverse;
 
+        .le-swan-menu__list-item-name {
+          padding: 0 0 0 10px;
+          text-align: right;
+        }
+
         &::before {
           content: "\\";
           position: absolute;
@@ -147,6 +153,11 @@
         justify-content: space-between;
         flex-direction: row-reverse;
         width: 100%;
+
+        .le-swan-menu__list-item-name {
+          padding: 0 0 0 10px;
+          text-align: right;
+        }
 
         &:nth-child(even) {
           padding: 0;
@@ -303,12 +314,29 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .le-swan-header {
+    flex-direction: column;
+
+    h1 {
+      order: -1;
+      margin: 80px 0;
+    }
+
+    .le-swan-header__box {
+      flex: 0 0 auto;
+    }
+  }
+  .le-swan-section .le-swan-section_inner {
+    padding-left: $narrowGutter;
+    padding-right: $narrowGutter;
+    max-width: calc(#{$maxWidth} - #{$narrowGutter});
+  }
   .le-swan-section__intro {
     .le-swan-section_inner {
       display: block;
       .le-swan-section__intro-left,
       .le-swan-section__intro-right {
-        width: 100%;
+        width: calc(100% - #{$narrowGutter});
       }
     }
   }
@@ -320,6 +348,10 @@
         &:nth-child(even) {
           padding: 0;
           flex-direction: row;
+
+          .le-swan-menu__list-item-name {
+            padding: 0 0 0 0;
+          }
 
           &::before {
             content: "";
@@ -337,20 +369,23 @@
       li {
         width: 100%;
         flex-direction: row;
+
+        .le-swan-menu__list-item-name {
+          padding: 0 0 0 0;
+        }
       }
     }
   }
   .le-swan-section__wine {
     .le-swan-menu__image {
-      margin: 0 auto;
-      width: 450px;
+      display: none;
     }
     .le-swan-menu__sparkling-wine {
       width: 100%;
     }
   }
   .le-swan-menu__fondue {
-    width: 100%;
+    width: calc(100% - #{$narrowGutter});
   }
   .le-swan-menu--two-column-odd {
     display: block;
