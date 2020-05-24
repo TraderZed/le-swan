@@ -38,7 +38,7 @@ gulp.task("images", () => {
 
 //Watch task
 gulp.task("default", () => {
-  gulp.watch("./src/assets/sass/*.scss", ["styles"]);
-  gulp.watch("./src/assets/js/*.js", ["es"]);
-  gulp.watch("./*.haml", ["haml"]);
+  gulp.watch("./src/assets/sass/*.scss", gulp.series("styles"));
+  gulp.watch("./src/assets/js/*.js", gulp.series("es"));
+  gulp.watch("./*.haml", gulp.series("haml"));
 });
